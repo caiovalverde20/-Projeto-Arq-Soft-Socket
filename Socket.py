@@ -12,8 +12,8 @@ def clean_text(text):
     return text
 
 def send_text(text, conn):
-    text = text.encode('utf-8')
-    conn.sendall(text.encode('utf-8'))
+    text_bytes = text.encode('utf-8')
+    conn.sendall(text_bytes)
 
 def data_sender():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
